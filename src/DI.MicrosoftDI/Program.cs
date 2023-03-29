@@ -11,6 +11,8 @@ builder.Services.AddSwaggerGen();
 
 
 builder.Services.AddSingleton<IWeatherForecaster, WeatherForecaster>();
+builder.Services.AddScoped<IWeatherForecaster, WeatherForecaster>();
+builder.Services.AddTransient<IWeatherForecaster, WeatherForecaster>();
 
 var app = builder.Build();
 

@@ -8,6 +8,8 @@ namespace DI.Autofac.AutofacModule
         protected override void Load(ContainerBuilder builder)
         {
             builder.RegisterType<WeatherForecaster>().As<IWeatherForecaster>().SingleInstance();
+            builder.RegisterType<WeatherForecaster>().As<IWeatherForecaster>().InstancePerLifetimeScope();
+            builder.RegisterType<WeatherForecaster>().As<IWeatherForecaster>().InstancePerDependency();
         }
     }
 }
