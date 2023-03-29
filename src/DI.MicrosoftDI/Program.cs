@@ -10,7 +10,7 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 
-builder.Services.AddScoped<IWeatherForecaster, WeatherForecaster>();
+builder.Services.AddSingleton<IWeatherForecaster, WeatherForecaster>();
 
 var app = builder.Build();
 
